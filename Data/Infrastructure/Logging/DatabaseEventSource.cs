@@ -17,14 +17,14 @@ namespace Data.Infrastructure.Logging
         [NonEvent]
         internal void RetrieveProductsCompleted(TimeSpan elapsedTime)
         {
-            RetrieveDeploymentCompleted(elapsedTime.ToString());
+            RetrieveProductsCompleted(elapsedTime.ToString());
         }
 
         [Event(1000,
             Level = EventLevel.Informational,
             Keywords = Keywords.Information,
             Message = "{0}  Producst Retrieved")]
-        private void RetrieveDeploymentCompleted(string eventTiming)
+        private void RetrieveProductsCompleted(string eventTiming)
         {
             WriteEvent(1000, eventTiming);
         }
