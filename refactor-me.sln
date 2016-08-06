@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me", "refactor-me\refactor-me.csproj", "{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Data", "Data\Data.csproj", "{C39E7DA9-EFDB-48B1-BECA-3112D79E0F18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "refactor-me.Tests", "refactor-me.Tests\refactor-me.Tests.csproj", "{918CC7D6-9BA1-42DD-91F6-76DD85E3CA83}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{20AB69F9-F2D3-4A68-96C3-424EC8B9406E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C39E7DA9-EFDB-48B1-BECA-3112D79E0F18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C39E7DA9-EFDB-48B1-BECA-3112D79E0F18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C39E7DA9-EFDB-48B1-BECA-3112D79E0F18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C39E7DA9-EFDB-48B1-BECA-3112D79E0F18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{918CC7D6-9BA1-42DD-91F6-76DD85E3CA83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{918CC7D6-9BA1-42DD-91F6-76DD85E3CA83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{918CC7D6-9BA1-42DD-91F6-76DD85E3CA83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{918CC7D6-9BA1-42DD-91F6-76DD85E3CA83}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

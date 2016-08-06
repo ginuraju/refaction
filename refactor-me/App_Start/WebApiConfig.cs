@@ -19,6 +19,9 @@ namespace refactor_me
                 routeTemplate: "api/{controller}/{id}",
                 defaults: new { id = RouteParameter.Optional }
             );
+
+            //IoC configuration
+            UnityConfiguration.RegisterComponents();
         }
     }
 }
