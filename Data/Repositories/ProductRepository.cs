@@ -32,8 +32,8 @@ namespace Data.Repositories
                 await
                     TimingHelper.ExecuteWithTimingAsync(
                         async () => await _context.Product.Where(p => p.Name.StartsWith(name)).ToListAsync(),
-                        elapsedTime => DatabaseEventSource.Log.RetrieveProductsCompleted(elapsedTime),
-                        (elapsedTime, ex) => DatabaseEventSource.Log.RetrieveProductsFailed(elapsedTime, ex));
+                        elapsedTime => DatabaseEventSource.Log.RetrieveProductsByNameCompleted(elapsedTime),
+                        (elapsedTime, ex) => DatabaseEventSource.Log.RetrieveProductsByNameFailed(elapsedTime, ex));
         }
 
         public async Task<Product> GetProductByProductIdAsync(Guid productId)
@@ -43,8 +43,8 @@ namespace Data.Repositories
                     TimingHelper.ExecuteWithTimingAsync(
                         async () =>
                             await _context.Product.SingleOrDefaultAsync(p => p.Id == productId && p.IsNew == false),
-                        elapsedTime => DatabaseEventSource.Log.RetrieveProductsCompleted(elapsedTime),
-                        (elapsedTime, ex) => DatabaseEventSource.Log.RetrieveProductsFailed(elapsedTime, ex));
+                        elapsedTime => DatabaseEventSource.Log.RetrieveProductByProductIdCompleted(elapsedTime),
+                        (elapsedTime, ex) => DatabaseEventSource.Log.RetrieveProductByProductIdFailed(elapsedTime, ex));
         }
 
         public async Task<Product> CreateProductAsync(Product product)
@@ -55,8 +55,8 @@ namespace Data.Repositories
                 await _context.SaveChangesAsync();
                 return newProduct;
             },
-                elapsedTime => DatabaseEventSource.Log.RetrieveProductsCompleted(elapsedTime),
-                (elapsedTime, ex) => DatabaseEventSource.Log.RetrieveProductsCompleted(elapsedTime));
+                elapsedTime => DatabaseEventSource.Log.CreateProductCompleted(elapsedTime),
+                (elapsedTime, ex) => DatabaseEventSource.Log.CreateProductFailed(elapsedTime, ex));
         }
 
         public async Task<Product> UpdateProductAsync(Product product)
